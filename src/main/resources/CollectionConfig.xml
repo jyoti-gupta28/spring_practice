@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="com.springcore.Collections.Emp" name="emp1">
+
+        <property name="name" value="Radhe"/>
+        <property name="phones">
+            <list>
+                <value>3563722982</value>
+                <value>3564546223</value>
+                <value>7654565456</value>
+                <value>2345678765</value>
+                <value>5255212125</value>
+                <value>8745645488</value>
+            </list>
+
+<!--            here if person have only one phone number then it is not required to add the list tag, we can just add in the vale , list will automatically understand and even can blank as well-->
+
+        </property>
+
+        <property name="address">
+            <set>
+                <value>Pune</value>
+                <value>MP</value>
+                <value>Bangalore</value>
+            </set>
+        </property>
+
+        <property name="courses">
+            <map>
+                <entry key="java" value="2month"/>
+                <entry key="Python" value="1.2month"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
