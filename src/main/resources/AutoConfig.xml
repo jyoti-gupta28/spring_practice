@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- this is our beans -->
+
+   <bean class="com.springcore.Autowiring.Address" name="address1" p:street="Temp Street" p:city="Pune" />
+    <bean class="com.springcore.Autowiring.Address" name="address2" p:street="Temp Street2" p:city="Lucknow" />
+
+
+<!--autowire="byName"-->
+
+<!--    here byName is used , it first see the refernce variable in Emp, and then it matches with the beans if there is any bean present , here above address name is prsent so it gave the result, if there was n0o bean present of the name of the reference then it cant find the bean and gave the null value-->
+<!--    <bean class="com.springcore.Autowiring.Emp" name="emp1" autowire="byName"/>-->
+
+
+<!--    autowire="byType"-->
+<!--    here it will check the type , if it is present then it will give the result but if there are two different beans of same type then it will give exception i.e. expected single matching bean but found 2-->
+<!--    <bean class="com.springcore.Autowiring.Emp" name="emp1" autowire="byType"/>-->
+
+<!--    here above in both cases the setter injection are called-->
+<!--constructor check by type-->
+<!--    it will check first Is there EXACTLY ONE Address bean available but I have two it will give error No qualifying bean of type 'com.springcore.Autowiring.Address' available: expected single matching bean but found 2 , but I am not getting error because i have no-arg constructor so value got null and created the object-->
+        <bean class="com.springcore.Autowiring.Emp" name="emp1" autowire="constructor"/>
+
+
+
+</beans>
