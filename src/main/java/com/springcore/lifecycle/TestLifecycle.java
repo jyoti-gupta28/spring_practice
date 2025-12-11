@@ -1,6 +1,7 @@
 package com.springcore.lifecycle;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,5 +16,8 @@ public class TestLifecycle {
         System.out.println("++++++++++++++++++++++++++");
         Pepsi p1 = (Pepsi) context.getBean("p1");
         System.out.println(p1);
+
+        Example example= (Example) context.getBean("example");
+        System.out.println(example);
     }
 }

@@ -9,10 +9,16 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    this is used to enable all the annotation-->
+    <context:annotation-config/>
+
+
     <!-- this is our beans -->
     <bean class="com.springcore.lifecycle.Samosa" name="s1" p:price="10" init-method="init" destroy-method="destroy"/>
 
     <bean class="com.springcore.lifecycle.Pepsi" name="p1" p:price="50"/>
+    <bean class="com.springcore.lifecycle.Example" name="example" p:subject="Chemistry"/>
 
-
+    <!--    the below bean is used to enable the @PostConstruct and @PreDestroy annoations-->
+<!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
 </beans>
