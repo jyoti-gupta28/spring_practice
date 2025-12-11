@@ -12,4 +12,7 @@
     <!-- this is our beans -->
     <bean class="com.springcore.lifecycle.Samosa" name="s1" p:price="10" init-method="init" destroy-method="destroy"/>
 
+    <bean class="com.springcore.lifecycle.Pepsi" name="p1" p:price="50"/>
+
+
 </beans>

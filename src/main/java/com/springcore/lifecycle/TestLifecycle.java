@@ -11,5 +11,9 @@ public class TestLifecycle {
         System.out.println(s1);
 //        registering shutdown hook
         context.registerShutdownHook();
+
+        System.out.println("++++++++++++++++++++++++++");
+        Pepsi p1 = (Pepsi) context.getBean("p1");
+        System.out.println(p1);
     }
 }
