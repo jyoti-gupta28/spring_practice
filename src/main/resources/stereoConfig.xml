@@ -20,4 +20,5 @@
         <value>Bangalore</value>
 
     </util:list>
+    <bean class="com.springcore.stereoType.Teacher" name="teacher" scope="prototype"/>
 </beans>
