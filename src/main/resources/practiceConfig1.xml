@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- this is our beans -->
+
+<!--<bean class="com.practice.SpringContainerAndApplicationContext.Student" name="student" p:id="101" p:name="Jyoti"/>-->
+<!--<bean class="com.practice.SpringContainerAndApplicationContext.Student" name="student1"  p:name="Jyoti"/>-->
+<!--<bean class="com.practice.setterInjection.Employee" name="employee" p:id="102"  p:salary="5000000.0" />-->
+<!--<bean class="com.practice.constructorInjection.Book" name="book">-->
+<!--    <constructor-arg type="String">-->
+<!--        <value>ABC</value>-->
+<!--    </constructor-arg>-->
+<!--    <constructor-arg type="int">-->
+<!--        <value>11</value>-->
+<!--    </constructor-arg>-->
+<!--</bean>-->
+<!--    <bean class="com.practice.ConstructorAmbiguity.Calculator" name="calculator">-->
+<!--        <constructor-arg index="1">-->
+<!--            <value type="int">24</value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg index="0">-->
+<!--            <value type="int">55</value>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+<!--reference injection using setter injection -->
+<!--    <bean class="com.practice.ReferenceInjectionj.Address" name="address" >-->
+<!--        <property name="city">-->
+<!--            <value>Pune</value>-->
+<!--        </property>-->
+<!--        <property name="street">-->
+<!--            <value>Hinjewadi</value>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean class="com.practice.ReferenceInjectionj.student" name="student">-->
+<!--        <property name="id">-->
+<!--            <value>1</value>-->
+<!--        </property>-->
+<!--        <property name="address" ref="address">-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean class="com.practice.ReferenceInjectionj.Address" name="address" >-->
+<!--        <constructor-arg>-->
+<!--            <value>-->
+<!--                Pune-->
+<!--            </value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg>-->
+<!--            <value>-->
+<!--                Hinjewadi-->
+<!--            </value>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean class="com.practice.ReferenceInjectionj.student" name="student">-->
+<!--        <constructor-arg name="id" index="1">-->
+<!--            <value>-->
+<!--                1-->
+<!--            </value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg ref="address" index="0">-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean class="com.practice.ReferenceInjectionj.student" name="student1">-->
+<!--        <constructor-arg name="id" index="1">-->
+<!--            <value>-->
+<!--                2-->
+<!--            </value>-->
+<!--        </constructor-arg>-->
+<!--        <constructor-arg ref="address" index="0">-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+    <bean class="com.practice.CollectionInjection.Question" name="question">
+        <property name="qid">
+            <value>1</value>
+        </property>
+        <property name="answers">
+            <set>
+                <value>This is String</value>
+                <value>This is String</value>
+                <value>This is a collection of characters</value>
+                <value>Can we be concatenated using +</value>
+            </set>
+        </property>
+    </bean>
+
+
+</beans>
